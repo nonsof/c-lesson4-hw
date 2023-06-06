@@ -5,17 +5,20 @@
 
 Console.WriteLine("write a number");
 int a = Convert.ToInt32(Console.ReadLine());
+
 void summ (int s)
 {
     string magic = Convert.ToString(s);
     int count = magic.Length;
     int result = 0;
-    for (int i = 0; i<count; i++)
+    for (int i = 0; i < count; i++)
     {
-        result = result + magic[i];
-        Console.WriteLine (result);
+        char tempo = magic [i];
+        result = tempo - '0' + result;
+        
     }
 
-}
+    Console.WriteLine(result);
+    }
 
 summ (a);
